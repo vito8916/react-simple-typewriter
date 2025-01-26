@@ -12,12 +12,12 @@ A lightweight React package to create a typewriter effect effortlessly. Perfect 
 
 Install the package using npm:
 ```bash
-npm install react-simple-typewriter
+npm install react-simple-typewriter-vb
 ```
 
 Or using yarn:
 ```bash
-yarn add react-simple-typewriter
+yarn add react-simple-typewriter-vb
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ Here’s how to use the `TypeWriter` component in your React project:
 
 ```tsx
 import React from 'react';
-import { TypeWriter } from 'react-simple-typewriter';
+import { TypeWriter } from 'react-simple-typewriter-vb';
 
 const App = () => {
   return (
@@ -61,7 +61,7 @@ export default App;
 
 ```tsx
 import React from 'react';
-import { TypeWriter } from 'react-simple-typewriter';
+import { TypeWriter } from 'react-simple-typewriter-vb';
 
 const Example = () => (
   <TypeWriter
@@ -102,7 +102,7 @@ If you’d like to contribute or modify the package locally:
 
 5. Test the package in a local project:
    ```bash
-   npm link react-simple-typewriter
+   npm link react-simple-typewriter-vb
    ```
 
 ## License
