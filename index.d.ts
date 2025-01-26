@@ -1,4 +1,4 @@
-declare module "react-simple-typewriter" {
+declare module "react-simple-typewriter-vb" {
     import * as React from "react";
 
     export interface TypewriterProps {
