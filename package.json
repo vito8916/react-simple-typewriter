@@ -1,6 +1,6 @@
 {
-  "name": "react-simple-typewriter",
-  "version": "1.0.0",
+  "name": "react-simple-typewriter-vb",
+  "version": "1.0.2",
   "description": "A simple React typewriter effect package.",
   "main": "dist/index.js",
   "type": "module",
