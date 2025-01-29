@@ -1,32 +1,40 @@
 {
   "name": "react-simple-typewriter-vb",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A simple React typewriter effect package.",
   "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "type": "module",
   "types": "index.d.ts",
   "files": ["dist", "index.d.ts"],
   "scripts": {
-    "build": "babel src --out-dir dist && babel index.js --out-file dist/index.js",
+    "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "react",
     "typewriter",
-    "animation"
+    "animation",
+    "nextjs"
   ],
   "author": "Victor Alvarado",
   "license": "MIT",
   "peerDependencies": {
     "react": ">=16.8",
-    "react-dom": ">=16.8"
+    "react-dom": ">=16.8",
+    "prop-types": ">=15.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.9",
-    "babel-minify": "^0.2.0",
     "@babel/core": "^7.26.7",
     "@babel/preset-env": "^7.26.7",
     "@babel/preset-react": "^7.26.3",
+    "@babel/plugin-syntax-explicit-resource-management": "^7.23.3",
+    "@rollup/plugin-babel": "^6.0.0",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "rollup": "^4.9.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "typescript": "^5.7.3"
   }
 }

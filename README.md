@@ -1,12 +1,19 @@
-# react-simple-typewriter
+# react-simple-typewriter-vb
 
 A lightweight React package to create a typewriter effect effortlessly. Perfect for adding dynamic and engaging text animations to your projects.
 
 ## Features
 - 🚀 Simple and easy-to-use API
 - ⚡ Lightweight and fast
-- 🎨 Customizable speed and pause duration
+- 🎨 Customizable typing and deleting speeds
 - 🔄 Rotates through multiple strings
+- ⚙️ Configurable loop behavior
+- 🎭 Smooth delete animation effect
+- ✨ Next.js compatible
+- 🖥️ Server-side rendering support
+- 🎯 Zero dependencies
+- 📱 Responsive and accessible
+- 🎨 Customizable styling
 
 ## Installation
 
@@ -22,7 +29,7 @@ yarn add react-simple-typewriter-vb
 
 ## Usage
 
-Here’s how to use the `TypeWriter` component in your React project:
+Here's how to use the `TypeWriter` component in your React project:
 
 ```tsx
 import React from 'react';
@@ -51,11 +58,13 @@ export default App;
 
 ### Options
 
-| Option   | Type     | Default | Description                                         |
-|----------|----------|---------|-----------------------------------------------------|
-| `strings`| `string[]` | `[]`    | Array of strings to type.                         |
-| `speed`  | `number` | `50`     | Typing speed in milliseconds.                     |
-| `pause`  | `number` | `1000`   | Pause duration in milliseconds between strings.    |
+| Option       | Type      | Default | Description                                         |
+|--------------|-----------|---------|-----------------------------------------------------|
+| `strings`    | `string[]`| `[]`    | Array of strings to type.                          |
+| `speed`      | `number`  | `50`    | Typing speed in milliseconds.                      |
+| `deleteSpeed`| `number`  | `30`    | Deleting speed in milliseconds.                    |
+| `pause`      | `number`  | `1000`  | Pause duration in milliseconds between strings.     |
+| `loop`       | `boolean` | `true`  | Whether to loop through the strings continuously.   |
 
 ## Example
 
@@ -69,6 +78,8 @@ const Example = () => (
       strings: ['React is awesome!', 'Try this typewriter effect!'],
       speed: 75,
       pause: 1500,
+      loop: false,
+      deleteSpeed: 90,
     }}
   />
 );
@@ -76,9 +87,101 @@ const Example = () => (
 export default Example;
 ```
 
+## Advanced Usage
+
+### With Custom Styling
+
+You can customize the appearance of the TypeWriter component by wrapping it with your own styled component:
+
+```tsx
+import React from 'react';
+import { TypeWriter } from 'react-simple-typewriter-vb';
+
+const StyledExample = () => (
+  <div style={{ 
+    fontFamily: 'monospace',
+    fontSize: '2em',
+    color: '#333',
+    padding: '20px'
+  }}>
+    <TypeWriter
+      options={{
+        strings: ['Custom styled typewriter!', 'Make it your own!'],
+        speed: 75,
+        pause: 1500,
+      }}
+    />
+  </div>
+);
+```
+
+### With Next.js
+
+The component is fully compatible with Next.js, including server-side rendering:
+
+```tsx
+// pages/index.tsx
+import { TypeWriter } from 'react-simple-typewriter-vb';
+
+export default function Home() {
+  return (
+    <main>
+      <h1>
+        <TypeWriter
+          options={{
+            strings: ['Welcome to Next.js!', 'Built with TypeWriter'],
+            speed: 50,
+            loop: true,
+          }}
+        />
+      </h1>
+    </main>
+  );
+}
+```
+
+### TypeScript Support
+
+The package includes TypeScript definitions out of the box:
+
+```tsx
+import { TypeWriter, TypewriterProps } from 'react-simple-typewriter-vb';
+
+const options: TypewriterProps['options'] = {
+  strings: ['TypeScript Support!', 'Full type safety!'],
+  speed: 50,
+  pause: 1000,
+  loop: true,
+};
+
+const TypeScriptExample = () => (
+  <TypeWriter options={options} />
+);
+```
+
+## Changelog
+
+### 1.0.5
+- 🔄 Improved loop behavior with proper word completion
+- ⚡ Optimized animation performance using useRef
+- 🛠️ Fixed last word deletion when loop is false
+- 🔧 Better Next.js integration with proper 'use client' directive handling
+- 🎯 Improved TypeScript definitions
+
+### 1.0.4
+- Added TypeScript support
+- Improved server-side rendering
+- Fixed loop behavior
+- Added deleteSpeed option
+
+### 1.0.3
+- Initial public release
+- Basic typewriter functionality
+- Customizable speeds and pauses
+
 ## Development
 
-If you’d like to contribute or modify the package locally:
+If you'd like to contribute or modify the package locally:
 
 1. Clone the repository:
    ```bash
