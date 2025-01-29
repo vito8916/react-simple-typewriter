@@ -162,17 +162,14 @@ const TypeScriptExample = () => (
 ## Changelog
 
 ### 1.0.5
+- Added deleteSpeed option
+- Improved server-side rendering
+- Added TypeScript support
 - 🔄 Improved loop behavior with proper word completion
 - ⚡ Optimized animation performance using useRef
 - 🛠️ Fixed last word deletion when loop is false
 - 🔧 Better Next.js integration with proper 'use client' directive handling
 - 🎯 Improved TypeScript definitions
-
-### 1.0.4
-- Added TypeScript support
-- Improved server-side rendering
-- Fixed loop behavior
-- Added deleteSpeed option
 
 ### 1.0.3
 - Initial public release
